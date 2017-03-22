@@ -1,0 +1,405 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- =========== Bases =========== -->
+
+  <ThingDef Name="ChunkBase" Abstract="True">
+    <category>Item</category>
+    <thingClass>Thing</thingClass>
+    <altitudeLayer>Item</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0.4</fillPercent>
+    <statBases>
+      <MaxHitPoints>300</MaxHitPoints>
+      <Flammability>0</Flammability>
+      <Beauty>-20</Beauty>
+      <Cleanliness>-2</Cleanliness>
+    </statBases>
+    <selectable>true</selectable>
+    <pathCost>55</pathCost>
+    <pathCostIgnoreRepeat>true</pathCostIgnoreRepeat>
+    <drawerType>MapMeshOnly</drawerType>
+    <randomizeRotationOnSpawn>true</randomizeRotationOnSpawn>
+    <designateHaulable>true</designateHaulable>
+    <saveCompressible>true</saveCompressible>
+    <stackLimit>1</stackLimit>
+    <tradeability>Never</tradeability>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase" Name="StoneBlocksBase" Abstract="True">
+    <description>Blocks of stone. Mostly useful for building long-lasting, simple structures.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/StoneBlocks</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Stone_Drop</soundInteract>
+    <soundDrop>Stone_Drop</soundDrop>
+    <useHitPoints>false</useHitPoints>
+    <statBases>
+      <MarketValue>1.9</MarketValue>
+      <SharpDamageMultiplier>0.6</SharpDamageMultiplier>
+      <BluntDamageMultiplier>1.0</BluntDamageMultiplier>
+			<Beauty>-12</Beauty>
+		</statBases>
+    <thingCategories>
+      <li>StoneBlocks</li>
+    </thingCategories>
+    <stuffProps>
+      <categories>
+        <li>Stony</li>
+      </categories>
+      <commonality>0.20</commonality> <!-- because there are so many stone types -->
+      <appearance>Bricks</appearance>
+      <statOffsets>
+        <WorkToBuild>140</WorkToBuild>
+				<Beauty>2</Beauty>
+      </statOffsets>
+      <statFactors>
+        <Beauty>1.2</Beauty>
+        <MarketValue>0.4</MarketValue>
+        <MaxHitPoints>2.4</MaxHitPoints>
+        <Flammability>0</Flammability>
+        <WorkToBuild>6.0</WorkToBuild>
+				<WorkToMake>1.3</WorkToMake>
+        <DoorOpenSpeed>0.45</DoorOpenSpeed>
+        <BedRestEffectiveness>0.9</BedRestEffectiveness>
+        <MeleeWeapon_Cooldown>1.35</MeleeWeapon_Cooldown>
+      </statFactors>
+    </stuffProps>
+  </ThingDef>
+
+  <ThingDef Name="UglyRockBase" ParentName="RockBase" Abstract="True" >
+    <statBases>
+      <Flammability>0</Flammability>
+      <Beauty>-2</Beauty>
+    </statBases>
+  </ThingDef>
+  
+ 
+	<!-- ================ Emperador Dark ================ -->
+  
+  <ThingDef ParentName="UglyRockBase">
+    <defName>Emperadordark</defName>
+    <label>emperador dark</label>
+    <description>A RED marble.</description>
+    <graphicData>
+      <color>(92,33,33)</color>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>450</MaxHitPoints>
+    </statBases>
+    <building>
+      <mineableThing>ChunkEmperadordark</mineableThing>
+      <mineableDropChance>0.25</mineableDropChance>
+    </building>
+  </ThingDef>
+  
+  <ThingDef ParentName="ChunkBase">
+    <defName>ChunkEmperadordark</defName>
+    <label>emperador dark chunk</label>
+    <graphicData>
+      <texPath>Things/Item/Chunk/ChunkStone</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <color>(92,33,33)</color>
+    </graphicData>
+    <statBases>
+      <Mass>25</Mass>
+    </statBases>
+    <soundDrop>ChunkRock_Drop</soundDrop>
+    <thingCategories>
+      <li>StoneChunks</li>
+    </thingCategories>
+    <butcherProducts>
+      <BlocksEmperadordark>20</BlocksEmperadordark>
+    </butcherProducts>
+  </ThingDef>
+  
+  <ThingDef ParentName="StoneBlocksBase">
+    <defName>BlocksEmperadordark</defName>
+    <label>emperador dark blocks</label>
+    <description>Blocks of solid emperador dark marble.</description>
+    <graphicData>
+      <color>(92,33,33)</color>
+    </graphicData>
+    <statBases>
+      <MarketValue>1.9</MarketValue>
+      <Mass>1</Mass>
+      <SharpDamageMultiplier>0.5</SharpDamageMultiplier>
+    </statBases>
+    <stuffProps>
+      <color>(92,33,33)</color>
+      <soundImpactStuff>BulletImpactGround</soundImpactStuff>
+      <soundMeleeHitSharp>MeleeHit_Stone</soundMeleeHitSharp>
+      <soundMeleeHitBlunt>MeleeHit_Stone</soundMeleeHitBlunt>
+      <stuffAdjective>emperador dark</stuffAdjective>
+      <statFactors>
+        <Beauty>1.35</Beauty>  
+        <MarketValue>0.45</MarketValue>
+        <MaxHitPoints>1.2</MaxHitPoints>
+				<WorkToBuild>5.5</WorkToBuild>
+				<WorkToMake>1.15</WorkToMake>
+      </statFactors>
+    </stuffProps>
+  </ThingDef>
+
+	<RecipeDef ParentName="MakeStoneBlocksBase">
+		<defName>MakeStoneBlocksEmperadordark</defName>
+		<label>make emperador dark marble blocks</label>
+		<description>Cuts emperador dark chunks into usable blocks.</description>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ChunkEmperadordark</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>ChunkEmperadordark</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<BlocksEmperadordark>20</BlocksEmperadordark>
+		</products>
+	</RecipeDef>
+  
+  <ThingDef ParentName="UglyRockBase">
+    <defName>Obsidian</defName>
+    <label>obsidian</label>
+    <description>A naturally occurring volcanic glass.</description>
+    <graphicData>
+      <color>(30,30,30)</color>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>1000</MaxHitPoints>
+    </statBases>
+    <building>
+      <mineableThing>ChunkObsidian</mineableThing>
+      <mineableDropChance>0.25</mineableDropChance>
+    </building>
+  </ThingDef>
+  
+  <ThingDef ParentName="ChunkBase">
+    <defName>ChunkObsidian</defName>
+    <label>obsidian chunk</label>
+    <graphicData>
+      <texPath>Things/Item/Chunk/ChunkStone</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <color>(30,30,30)</color>
+    </graphicData>
+    <statBases>
+      <Mass>30</Mass>
+    </statBases>
+    <soundDrop>ChunkRock_Drop</soundDrop>
+    <thingCategories>
+      <li>StoneChunks</li>
+    </thingCategories>
+    <butcherProducts>
+      <BlocksObsidian>20</BlocksObsidian>
+    </butcherProducts>
+  </ThingDef>
+  
+  <ThingDef ParentName="StoneBlocksBase">
+    <defName>BlocksObsidian</defName>
+    <label>obsidian blocks</label>
+    <description>Blocks of solid obsidian.</description>
+    <graphicData>
+      <color>(30,30,30)</color>
+    </graphicData>
+    <statBases>
+      <MarketValue>2</MarketValue>
+      <Mass>4</Mass>
+      <SharpDamageMultiplier>0.65</SharpDamageMultiplier>
+    </statBases>
+    <stuffProps>
+      <color>(30,30,30)</color>
+      <soundImpactStuff>BulletImpactGround</soundImpactStuff>
+      <soundMeleeHitSharp>MeleeHit_Stone</soundMeleeHitSharp>
+      <soundMeleeHitBlunt>MeleeHit_Stone</soundMeleeHitBlunt>
+      <stuffAdjective>obsidian</stuffAdjective>
+      <statFactors>
+        <Beauty>1.2</Beauty>  
+        <MarketValue>0.5</MarketValue>
+        <MaxHitPoints>2.0</MaxHitPoints>
+		<WorkToBuild>6.0</WorkToBuild>
+		<WorkToMake>2.8</WorkToMake>
+      </statFactors>
+    </stuffProps>
+  </ThingDef>
+
+	<RecipeDef ParentName="MakeStoneBlocksBase">
+		<defName>MakeStoneBlocksObsidian</defName>
+		<label>make obsidian blocks</label>
+		<description>Cuts obsidian chunks into usable blocks.</description>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ChunkObsidian</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>ChunkObsidian</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<BlocksObsidian>20</BlocksObsidian>
+		</products>
+	</RecipeDef>
+	
+  <ThingDef ParentName="UglyRockBase">
+    <defName>Basalt</defName>
+    <label>basalt</label>
+    <description>A plutonic rock composed largely of calcic plagioclase.</description>
+    <graphicData>
+      <color>(73,77,79)</color>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>560</MaxHitPoints>
+    </statBases>
+    <building>
+      <mineableThing>ChunkBasalt</mineableThing>
+      <mineableDropChance>0.25</mineableDropChance>
+    </building>
+  </ThingDef>
+  
+  <ThingDef ParentName="ChunkBase">
+    <defName>ChunkBasalt</defName>
+    <label>basalt chunk</label>
+    <graphicData>
+      <texPath>Things/Item/Chunk/ChunkStone</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <color>(73,77,79)</color>
+    </graphicData>
+    <statBases>
+      <Mass>20</Mass>
+    </statBases>
+    <soundDrop>ChunkRock_Drop</soundDrop>
+    <thingCategories>
+      <li>StoneChunks</li>
+    </thingCategories>
+    <butcherProducts>
+      <BlocksBasalt>20</BlocksBasalt>
+    </butcherProducts>
+  </ThingDef>
+  
+  <ThingDef ParentName="StoneBlocksBase">
+    <defName>BlocksBasalt</defName>
+    <label>basalt blocks</label>
+    <description>Blocks of solid basalt.</description>
+    <graphicData>
+      <color>(73,77,79)</color>
+    </graphicData>
+    <statBases>
+      <MarketValue>2</MarketValue>
+      <Mass>4</Mass>
+      <SharpDamageMultiplier>0.65</SharpDamageMultiplier>
+    </statBases>
+    <stuffProps>
+      <color>(73,77,79)</color>
+      <soundImpactStuff>BulletImpactGround</soundImpactStuff>
+      <soundMeleeHitSharp>MeleeHit_Stone</soundMeleeHitSharp>
+      <soundMeleeHitBlunt>MeleeHit_Stone</soundMeleeHitBlunt>
+      <stuffAdjective>basalt</stuffAdjective>
+      <statFactors>
+        <Beauty>1.0</Beauty>  
+        <MarketValue>0.45</MarketValue>
+        <MaxHitPoints>1.5</MaxHitPoints>
+		<WorkToBuild>5.0</WorkToBuild>
+		<WorkToMake>1.1</WorkToMake>
+      </statFactors>
+    </stuffProps>
+  </ThingDef>
+
+	<RecipeDef ParentName="MakeStoneBlocksBase">
+		<defName>MakeStoneBlocksBasalt</defName>
+		<label>make basalt blocks</label>
+		<description>Cuts basalt chunks into usable blocks.</description>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ChunkBasalt</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>ChunkBasalt</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<BlocksBasalt>20</BlocksBasalt>
+		</products>
+	</RecipeDef>
+	
+		<ThingDef ParentName="UglyRockBase">
+    <defName>Granite</defName>
+    <label>granite</label>
+    <description>A very hard igneous rock.</description>
+    <graphicData>
+      <color>(141,142,149)</color>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>900</MaxHitPoints>
+    </statBases>
+    <building>
+      <mineableThing>ChunkGranite</mineableThing>
+      <mineableDropChance>0.25</mineableDropChance>
+    </building>
+  </ThingDef>
+
+  <ThingDef ParentName="ChunkBase">
+    <defName>ChunkGranite</defName>
+    <label>granite chunk</label>
+    <graphicData>
+      <texPath>Things/Item/Chunk/ChunkStone</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <color>(141,142,149)</color>
+    </graphicData>
+    <statBases>
+      <Mass>25</Mass>
+    </statBases>
+    <soundDrop>ChunkRock_Drop</soundDrop>
+    <thingCategories>
+      <li>StoneChunks</li>
+    </thingCategories>
+    <butcherProducts>
+      <BlocksGranite>20</BlocksGranite>  
+    </butcherProducts>
+  </ThingDef>
+
+  <ThingDef ParentName="StoneBlocksBase">
+    <defName>BlocksGranite</defName>
+    <label>granite blocks</label>
+    <description>Blocks of solid granite. Granite is a very hard stone.</description>
+    <graphicData>
+      <color>(141,142,149)</color>
+    </graphicData>
+    <statBases>
+      <MarketValue>2.1</MarketValue>
+      <Mass>1.25</Mass>
+      <SharpDamageMultiplier>0.65</SharpDamageMultiplier>
+    </statBases>
+    <stuffProps>
+      <color>(141,142,149)</color>
+      <soundImpactStuff>BulletImpactGround</soundImpactStuff>
+      <soundMeleeHitSharp>MeleeHit_Stone</soundMeleeHitSharp>
+      <soundMeleeHitBlunt>MeleeHit_Stone</soundMeleeHitBlunt>
+      <stuffAdjective>granite</stuffAdjective>
+      <statFactors>
+        <MarketValue>0.5</MarketValue>
+        <MaxHitPoints>1.7</MaxHitPoints>
+      </statFactors>
+    </stuffProps>
+  </ThingDef>
+</Defs>

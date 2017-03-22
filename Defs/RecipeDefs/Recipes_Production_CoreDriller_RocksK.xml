@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<RecipeDefs>
+
+	
+	<RecipeDef>
+		<defName>MiningDeepEmperadordark</defName>
+		<label>mining deep Emperador Dark</label>
+		<description>mining deep Emperador Dark.</description>
+		<jobString>Mining deep Emperador Dark.</jobString>
+		<workAmount>1500</workAmount>
+		<effectWorking>CutStone</effectWorking>
+		<workSkillLearnFactor>0.2</workSkillLearnFactor>
+		<products>
+			<BlocksEmperadordark>1</BlocksEmperadordark>
+		</products>
+		<workSkill>Mining</workSkill>
+		<recipeUsers>
+			<li>CoreDrill</li>
+		</recipeUsers>
+	</RecipeDef>
+	<RecipeDef>
+		<defName>MiningDeepObsidian</defName>
+		<label>mining deep obsidian</label>
+		<description>mining deep obsidian.</description>
+		<jobString>Mining deep obsidian.</jobString>
+		<workAmount>1500</workAmount>
+		<effectWorking>CutStone</effectWorking>
+		<workSkillLearnFactor>0.2</workSkillLearnFactor>
+		<products>
+			<BlocksObsidian>10</BlocksObsidian>
+		</products>
+		<workSkill>Mining</workSkill>
+		<recipeUsers>
+			<li>CoreDrill</li>
+		</recipeUsers>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>MiningDeepBasalt</defName>
+		<label>mining deep basalt</label>
+		<description>mining deep basalt.</description>
+		<jobString>Mining deep basalt.</jobString>
+		<workAmount>1500</workAmount>
+		<effectWorking>CutStone</effectWorking>
+		<workSkillLearnFactor>0.2</workSkillLearnFactor>
+		<products>
+			<BlocksBasalt>1</BlocksBasalt>
+		</products>
+		<workSkill>Mining</workSkill>
+		<recipeUsers>
+			<li>CoreDrill</li>
+		</recipeUsers>
+	</RecipeDef>
+
+</RecipeDefs>

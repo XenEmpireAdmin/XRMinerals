@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<RecipeDefs>
+
+	
+	<RecipeDef>
+		<defName>MiningDeepAquamarine</defName>
+		<label>mining deep aquamarine</label>
+		<description>mining deep aquamarine.</description>
+		<jobString>Mining deep aquamarine.</jobString>
+		<workAmount>1500</workAmount>
+		<effectWorking>CutStone</effectWorking>
+		<workSkillLearnFactor>1.2</workSkillLearnFactor>
+		<products>
+			<Aquamarine>15</Aquamarine>
+		</products>
+		<workSkill>Mining</workSkill>
+		<recipeUsers>
+			<li>CoreDrill</li>
+		</recipeUsers>
+	</RecipeDef>
+	
+	<RecipeDef>
+		<defName>MiningDeepBenitoite</defName>
+		<label>mining deep benitoite</label>
+		<description>mining deep benitoite.</description>
+		<jobString>Mining deep benitoite.</jobString>
+		<workAmount>1500</workAmount>
+		<effectWorking>CutStone</effectWorking>
+		<workSkillLearnFactor>1.2</workSkillLearnFactor>
+		<products>
+			<Benitoite>15</Benitoite>
+		</products>
+		<workSkill>Mining</workSkill>
+		<recipeUsers>
+			<li>CoreDrill</li>
+		</recipeUsers>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>MiningDeepEmerald</defName>
+		<label>mining deep emerald</label>
+		<description>mining deep emerald.</description>
+		<jobString>Mining deep emerald.</jobString>
+		<workAmount>1500</workAmount>
+		<effectWorking>CutStone</effectWorking>
+		<workSkillLearnFactor>1.2</workSkillLearnFactor>
+		<products>
+			<Emerald>15</Emerald>
+		</products>
+		<workSkill>Mining</workSkill>
+		<recipeUsers>
+			<li>CoreDrill</li>
+		</recipeUsers>
+	</RecipeDef>
+	
+	
+	<RecipeDef>
+		<defName>MiningDeepQuartz</defName>
+		<label>mining deep quartz</label>
+		<description>mining deep quartz.</description>
+		<jobString>Mining deep quartz.</jobString>
+		<workAmount>1500</workAmount>
+		<effectWorking>CutStone</effectWorking>
+		<workSkillLearnFactor>1.2</workSkillLearnFactor>
+		<products>
+			<Quartz>15</Quartz>
+		</products>
+		<workSkill>Mining</workSkill>
+		<recipeUsers>
+			<li>CoreDrill</li>
+		</recipeUsers>
+	</RecipeDef>
+	
+	<RecipeDef>
+		<defName>MiningDeepRuby</defName>
+		<label>mining deep ruby</label>
+		<description>mining deep ruby.</description>
+		<jobString>Mining deep ruby.</jobString>
+		<workAmount>1500</workAmount>
+		<effectWorking>CutStone</effectWorking>
+		<workSkillLearnFactor>1.2</workSkillLearnFactor>
+		<products>
+			<Ruby>15</Ruby>
+		</products>
+		<workSkill>Mining</workSkill>
+		<recipeUsers>
+			<li>CoreDrill</li>
+		</recipeUsers>
+	</RecipeDef>
+	
+	<RecipeDef>
+		<defName>MiningDeepSapphire</defName>
+		<label>mining deep sapphire</label>
+		<description>mining deep sapphire.</description>
+		<jobString>Mining deep sapphire.</jobString>
+		<workAmount>1500</workAmount>
+		<effectWorking>CutStone</effectWorking>
+		<workSkillLearnFactor>1.2</workSkillLearnFactor>
+		<products>
+			<Sapphire>15</Sapphire>
+		</products>
+		<workSkill>Mining</workSkill>
+		<recipeUsers>
+			<li>CoreDrill</li>
+		</recipeUsers>
+	</RecipeDef>
+	
+</RecipeDefs>
