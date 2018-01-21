@@ -45,7 +45,7 @@
 			<WorkToBuild>5.875</WorkToBuild>
 			<Beauty>4</Beauty>
 		<Flammability>0.2</Flammability>
-        <MeleeWeapon_Cooldown>1.1</MeleeWeapon_Cooldown>
+        <MeleeWeapon_CooldownMultiplier>1.1</MeleeWeapon_CooldownMultiplier>
       </statFactors>
       <smeltable>false</smeltable>
     </stuffProps>
@@ -93,7 +93,7 @@
 			<WorkToBuild>5.125</WorkToBuild>
 			<Beauty>3</Beauty>
 		<Flammability>0.2</Flammability>
-        <MeleeWeapon_Cooldown>1.1</MeleeWeapon_Cooldown>
+        <MeleeWeapon_CooldownMultiplier>1.1</MeleeWeapon_CooldownMultiplier>
       </statFactors>
       <smeltable>false</smeltable>
     </stuffProps>
@@ -141,7 +141,7 @@
 			<WorkToBuild>5.75</WorkToBuild>
 			<Beauty>3</Beauty>
 		<Flammability>0.2</Flammability>
-        <MeleeWeapon_Cooldown>1.1</MeleeWeapon_Cooldown>
+        <MeleeWeapon_CooldownMultiplier>1.1</MeleeWeapon_CooldownMultiplier>
       </statFactors>
       <smeltable>false</smeltable>
     </stuffProps>
@@ -189,7 +189,7 @@
 			<WorkToBuild>5.5</WorkToBuild>
 			<Beauty>3</Beauty>
 		<Flammability>0.2</Flammability>
-        <MeleeWeapon_Cooldown>1.1</MeleeWeapon_Cooldown>
+        <MeleeWeapon_CooldownMultiplier>1.1</MeleeWeapon_CooldownMultiplier>
       </statFactors>
       <smeltable>false</smeltable>
     </stuffProps>
@@ -237,7 +237,7 @@
 			<WorkToBuild>6.5</WorkToBuild>
 			<Beauty>3</Beauty>
 		<Flammability>0.2</Flammability>
-        <MeleeWeapon_Cooldown>1.1</MeleeWeapon_Cooldown>
+        <MeleeWeapon_CooldownMultiplier>1.1</MeleeWeapon_CooldownMultiplier>
       </statFactors>
       <smeltable>false</smeltable>
     </stuffProps>
@@ -285,7 +285,7 @@
 			<WorkToBuild>6.5</WorkToBuild>
 			<Beauty>3</Beauty>
 		<Flammability>0.2</Flammability>
-        <MeleeWeapon_Cooldown>1.1</MeleeWeapon_Cooldown>
+        <MeleeWeapon_CooldownMultiplier>1.1</MeleeWeapon_CooldownMultiplier>
       </statFactors>
       <smeltable>false</smeltable>
     </stuffProps>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<RecipeDefs>
+<Defs>
 
 	
 	<RecipeDef>
@@ -44,7 +44,7 @@
 		<effectWorking>CutStone</effectWorking>
 		<workSkillLearnFactor>0.2</workSkillLearnFactor>
 		<products>
-			<BlocksBasalt>1</BlocksBasalt>
+			<BlocksBasalt>10</BlocksBasalt>
 		</products>
 		<workSkill>Mining</workSkill>
 		<recipeUsers>
@@ -52,4 +52,4 @@
 		</recipeUsers>
 	</RecipeDef>
 
-</RecipeDefs>
+</Defs>
